@@ -18,10 +18,10 @@ OBJ = $(SRC:%.c=$(SRCD)/%.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -lreadline -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 $(SRCD)/%.o: $(SRCD)/%.c
-	$(CC) $(CFLAGS) -Iincludes -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	$(RM) $(OBJ)
